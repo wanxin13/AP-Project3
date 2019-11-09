@@ -1,0 +1,85 @@
+\documentclass{report}
+\include{preamble}
+
+\title{\LectureTitle: Problem Set 3}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Exercise 1}
+
+\subsection{a}
+If the CAPM holds, $\gamma_{0}$ should equal to the risk-free rate $E(r_{f})$, or say the expected return of zero-correlation asset$E(r_{z})$. $\gamma_{M}$ should equal to the expected market return minus risk-free rate$E(r_{m}) - r_{f}$.
+
+\subsection{b}
+Table 1 shows the average of the estimates of $\gamma_{0}$ and $\gamma_{M}$ and their standard errors and t-statistics using the following regression.
+\[  R_{it} = \gamma_{0t} + \gamma_{Mt}b_{iM} +n_{it} \]
+We cannot reject the hypothesis that the proxy for the market portfolio is mean variance efficient since we expect average $\gamma_{0}$ is bigger than 0 and we can reject average $\gamma_{0}$ is equal to 0. Although we cannot reject $\gamma_{M}$ is equal to 0, we also cannot reject  $\gamma_{M}$ is not equal to 0 and we cannot reject $\gamma_{M}$ is bigger than 0. Thus, we cannot reject the hypothesis that the proxy for the market portfolio is mean variance efficient.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Coefficient& $\bar{\hat{\gamma}}$ & s($\bar{\hat{\gamma}}$) & t($\bar{\hat{\gamma}}$) \\
+\hline
+$\gamma_{0}$ & $0.8076$ & $0.1878$ & $4.3002$\\
+\hline
+$\gamma_{M}$ & $0.2216$ & $0.2527$ & $0.8769$\\
+\hline
+\end{tabular}
+\caption{ Summary Results For The Regression: $ R_{it} = \gamma_{0t} + \gamma_{Mt}b_{iM} +n_{it} $}
+\end{table}
+
+\subsection{c}
+Table 2 shows the estimates of $\gamma_{0}$ and $\gamma_{M}$ and their standard errors using the following regression.
+\[  ave(R_{i}) = \gamma_{0t} + \gamma_{M}b_{iM} +n_{i} \]
+The estimates of $\gamma_{0}$ and $\gamma_{M}$ are different from the average estimates in part b. The standard errors of estimates of $\gamma_{0}$ and $\gamma_{M}$ are much smaller than the average estimates in part b. The estimates are different because there are some missing data in different industries and when we calculate the average, we assume there is no missing data. When using the average returns of portfolios over time, the underlying assumption is returns of market, or say $\gamma_{0}$ and $\gamma_{M}$ do not change over time. Although this method gives less standard errors of estimates of $\gamma_{0}$ and $\gamma_{M}$, I think the assumption makes little sense. Thus I think the first method is superior.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Coefficient& $\bar{\hat{\gamma}}$ & s($\bar{\hat{\gamma}}$) \\
+\hline
+$\gamma_{0}$ & $0.9078$ & $0.0927$ \\
+\hline
+$\gamma_{M}$ & $0.1234$ & $0.0846$ \\
+\hline
+\end{tabular}
+\caption{ Summary Results For The Regression:  $ave(R_{i}) = \gamma_{0t} + \gamma_{M}b_{iM} +n_{i}$}
+\end{table}
+
+
+\subsection{d}
+Figure 1 is the plot of average portfolios' returns against their betas. From the plot, we can see a weak positive relationship. The plot should indicate a positive linear relationship between returns and betas with positive intercept.
+\begin{figure}[H]
+        \centering 
+         \includegraphics[width=0.7\textwidth]{figures//1d}
+         \caption{ Portfolio returns against beta}
+\end{figure}
+
+\subsection{e}
+If CAPM holds, $\gamma_{size}$ and $\gamma_{B/M}$ should equal to 0 because there should be no compensation to size factor or BE/ME factor.
+
+\subsection{f}
+The reason why size and BE/ME characteristics should be lagged values is that we can only know the past characteristics of an asset so we can only give a fair price of an asset based on its past characterisitics.
+Table 3 shows the average of the estimates of $\gamma_{0}$ ,$\gamma_{M}$, $\gamma_{size}$ and $\gamma_{B/M}$ and their standard errors and t-statistics. We cannot reject the hypothesis that the proxy for the market portfolio is mean variance efficient because we cannot reject the hypothesis $\gamma_{size}$ is equal to 0 and  $\gamma_{B/M}$ is equal to 0 at 5\% significance level. Furthermore, we expect average $\gamma_{0}$ is bigger than 0 and we can reject average $\gamma_{0}$ is equal to 0. Although we cannot reject $\gamma_{M}$ is equal to 0, we also cannot reject  $\gamma_{M}$ is not equal to 0 and we cannot reject $\gamma_{M}$ is bigger than 0. Thus, we cannot reject the hypothesis that the proxy for the market portfolio is mean variance efficient.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Coefficient& $\bar{\hat{\gamma}}$ & s($\bar{\hat{\gamma}}$) & t($\bar{\hat{\gamma}}$) \\
+\hline
+$\gamma_{0}$ & $0.9921$ & $0.3037$ & $3.2671$\\
+\hline
+$\gamma_{M}$ & $0.0377$ & $0.2209$ & $0.1707$\\
+\hline
+$\gamma_{size}$ & $-0.0259$ & $0.0403$ & $-0.6435$\\
+\hline
+$\gamma_{B/M}$ & $0.0175$ & $0.0738$ & $0.2379$\\
+\hline
+\end{tabular}
+\caption{ Summary Results For The Regression: $R_{it}=\gamma_{0t}+\gamma_{Mt}b_{iM}+\gamma_{sizet}ln([size]_{t-1})+\gamma_{B/Mt}ln([BE/ME]_{t-1})+n_{it} $}
+\end{table}
+
+\end{document}
+
